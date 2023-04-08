@@ -1,4 +1,4 @@
-# machinelearning-housingprices-modelcomparison-python
+# ML_housingprices-modelcomparison-python
 
 and compares the R^2 score between models.
 
