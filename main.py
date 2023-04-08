@@ -10,8 +10,8 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
-
-df = pd.read_csv("housing.csv")
+ 
+df = pd.read_csv("housing.csv") #Read in "housing" to "df"
 
 df.head() #Display "df's" head
 
