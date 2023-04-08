@@ -1,4 +1,4 @@
-# ML_housingprices-modelcomparison-python
+# ml-houseprices-comp-py
 
 and compares the R^2 score between models.
 
