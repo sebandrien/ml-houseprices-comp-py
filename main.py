@@ -1,4 +1,4 @@
-import warnings
+import warnings #Import libraries
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -15,5 +15,24 @@ df = pd.read_csv("housing.csv")
 
 df.head() #Display "df's" head
 
+df.tail() #Display "df's" tail
 
+df.info() #Display "df's" info
 
+df.describe() #Describe "df's" data
+
+transposed_df = df.transpose().isna() #Visualize negative values
+plt.figure(dpi=300)
+fig, ax = plt.subplots(figsize = (20,10))
+sns.heatmap(transposed_df, ax = ax, cmap = "viridis")
+plt.show()
+
+plt.figure(dpi=300) #Display histogram of "df"
+df.hist(figsize = (20,10))
+plt.show()
+
+df = pd.get_dummies(df, columns = ["ocean_proximity"], drop_first = True) #"ocean_proximity" is an object so it needs to be convereted to a float value
+
+df = df.dropna(axis = 0) #Drop null valus
+
+df.corr()["median_house_value"].sort_values(ascending = False) #View correlation
