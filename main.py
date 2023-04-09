@@ -36,3 +36,10 @@ df = pd.get_dummies(df, columns = ["ocean_proximity"], drop_first = True) #"ocea
 df = df.dropna(axis = 0) #Drop null valus
 
 df.corr()["median_house_value"].sort_values(ascending = False) #View correlation
+
+y = df[["median_house_value"]] #
+X = df.drop(["median_house_value"], axis = 1) #Drop 
+
+RS = 123
+TS = 0.25
+X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = TS, random_state = RS)c
